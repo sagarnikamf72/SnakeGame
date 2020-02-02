@@ -8,7 +8,12 @@
 
 using namespace std;
 
+
+//  CODE FOR kbhit() TAKEN FROM : 
+//		  https://cboard.cprogramming.com/c-programming/63166-kbhit-linux.html
 int kbhit();
+
+
 bool is_tail(int , int );
 void move_tail();
 enum dir{STOP, LEFT, RIGHT, DOWN, UP};
@@ -96,10 +101,7 @@ void Input(){
 		}
 	}
 }
-//  if(snake_dir == UP) y_snake--;
-//  else if(snake_dir == DOWN) y_snake++;
-//  else if(snake_dir == LEFT) x_snake--;
-//  else if(snake_dir == RIGHT) x_snake++;
+
 void Logic(){
 	move_tail();
 	switch(snake_dir){
@@ -165,10 +167,6 @@ int main(){
 }
 
 
-
-
-
-
 void move_tail(){
 	if(tail.empty())
 		return ;
@@ -190,6 +188,8 @@ bool is_tail(int x, int y){
 }
 
 
+//  CODE FOR kbhit() TAKEN FROM : 
+//		  https://cboard.cprogramming.com/c-programming/63166-kbhit-linux.html
 
 int kbhit(void)
 {
